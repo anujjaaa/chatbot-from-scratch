@@ -9,7 +9,7 @@ import random
 import json
 
 
-with open("intents.json") as file:
+with open("mood.json") as file:
     data = json.load(file)
 
 
@@ -72,4 +72,4 @@ net = tflearn.regression(net)
 model = tflearn.DNN(net)
 
 model.fit(training, output, n_epoch=1000, batch_size=8, show_metric=True)
-model.save("model.tflearn")
+model.save("model_mood.tflearn")

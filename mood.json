@@ -1,0 +1,33 @@
+{"intents": [
+        {"tag": "greeting",
+         "patterns": ["Hi", "Hello", "Whats up"],
+         "responses": ["Hi Anuja!, how are you feeling today?", "Good to see you again Anuja!, how are you today?", "Hi Anuja, hope you are doing good."],
+         "context_set": ""
+        },
+        {"tag": "goodbye",
+         "patterns": ["cya", "TTYL", "Goodbye", "Bye", "Have a Good day"],
+         "responses": ["Sad to see you go :(", "Okay, talk to you later.", "Goodbye!"],
+         "context_set": ""
+        },
+        {"tag": "mood_sad",
+         "patterns": ["i am sad", "I am not feeling good", "i feel low", "sad", "feeling bad"],
+         "responses": ["I am here for you", "But why? You are amazing!", "You aren't alone", "Count your rainbows not your thunderstrom"],
+         "context_set": ""
+        },
+        {"tag": "name",
+         "patterns": ["what is your name?", "what should i call you?", "who are you?"],
+         "responses": ["You can call me Bot.", "I'm Bot!", "I'm Bot Ro-Bot :)"],
+         "context_set": ""
+        },
+        {"tag": "mood_happy",
+         "patterns": ["I am happy", "i feel awesome", "i am good", "i am fine"],
+         "responses": ["We sell chocolate chip cookies for $2!", "Cookies are on the menu!"],
+         "context_set": ""
+        },
+        {"tag": "jokes",
+         "patterns": ["tell me a joke", "do you know jokes?", "are you funny?", "tell me something funny"],
+         "responses": ["What do you get from a pampered cow?..... spoilt milk!", "How does rabbi makes his coffee?...... Hebrews it!", "Why was easter bunny upset?..... He was having a bad hare day"],
+         "context_set": ""
+        }
+   ]
+}

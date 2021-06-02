@@ -13,7 +13,7 @@ with open("intents.json") as file:
     data = json.load(file)
 
 try:
-    with open("data.pickle", "rb") as f:
+    with open("data_mood.pickle", "rb") as f:
         words, labels, training, output = pickle.load(f)
 except:
     words = []
@@ -62,7 +62,7 @@ except:
     training = numpy.array(training)
     output = numpy.array(output)
 
-    with open("data.pickle", "wb") as f:
+    with open("data_mood.pickle", "wb") as f:
         pickle.dump((words, labels, training, output), f)
 
 from tensorflow.python.framework import ops
@@ -77,10 +77,10 @@ net = tflearn.regression(net)
 model = tflearn.DNN(net)
 
 try:
-    model.load("model.tflearn")
+    model.load("model_mood.tflearn")
 except:
     model.fit(training, output, n_epoch=1000, batch_size=8, show_metric=True)
-    model.save("model.tflearn")
+    model.save("model_mood.tflearn")
 
 def bag_of_words(s, words):
     bag = [0 for _ in range(len(words))]
