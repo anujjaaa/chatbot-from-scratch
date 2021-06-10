@@ -9,7 +9,7 @@ import random
 import json
 import pickle
 
-with open("intents.json") as file:
+with open("mood.json") as file:
     data = json.load(file)
 
 try:
@@ -112,5 +112,4 @@ def chat():
                 responses = tg['responses']
 
         print(random.choice(responses))
-
 chat()
